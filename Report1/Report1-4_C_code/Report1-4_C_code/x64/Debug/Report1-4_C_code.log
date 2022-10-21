@@ -1,0 +1,25 @@
+﻿  problem4.c
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(92,8): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(109,43): warning C4047: '함수': 'int **'의 간접 참조 수준이 'int (*)[4][4]'과(와) 다릅니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(109,37): warning C4024: 'standard': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(109,51): warning C4047: '함수': 'int **'의 간접 참조 수준이 'int (*)[4][4]'과(와) 다릅니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(109,45): warning C4024: 'standard': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(109,59): warning C4047: '함수': 'int **'의 간접 참조 수준이 'int (*)[4][4]'과(와) 다릅니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(109,53): warning C4024: 'standard': 형식 및 실제 매개 변수 3의 형식이 서로 다릅니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(113,42): warning C4047: '함수': 'int **'의 간접 참조 수준이 'int [8][8]'과(와) 다릅니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(113,37): warning C4024: 'standard': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(113,49): warning C4047: '함수': 'int **'의 간접 참조 수준이 'int [8][8]'과(와) 다릅니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(113,44): warning C4024: 'standard': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(113,56): warning C4047: '함수': 'int **'의 간접 참조 수준이 'int [8][8]'과(와) 다릅니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(113,51): warning C4024: 'standard': 형식 및 실제 매개 변수 3의 형식이 서로 다릅니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(118,20): warning C4047: '함수': 'int **'의 간접 참조 수준이 'int (*)[4][4]'과(와) 다릅니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(118,14): warning C4024: 'printMatrix': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(120,20): warning C4047: '함수': 'int **'의 간접 참조 수준이 'int (*)[4][4]'과(와) 다릅니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(120,14): warning C4024: 'printMatrix': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(122,20): warning C4047: '함수': 'int **'의 간접 참조 수준이 'int (*)[4][4]'과(와) 다릅니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(122,14): warning C4024: 'printMatrix': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(85,6): warning C4101: 'divAndConquerComputation_4x4' :참조되지 않은 지역 변수입니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(86,6): warning C4101: 'strassenComputation_4x4' :참조되지 않은 지역 변수입니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(89,6): warning C4101: 'divAndConquerComputation_8x8' :참조되지 않은 지역 변수입니다.
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\Report1-4_C_code\problem4.c(90,6): warning C4101: 'strassenComputation_8x8' :참조되지 않은 지역 변수입니다.
+  Report1-4_C_code.vcxproj -> C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-4_C_code\x64\Debug\Report1-4_C_code.exe

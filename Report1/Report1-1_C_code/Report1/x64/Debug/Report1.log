@@ -1,0 +1,3 @@
+﻿  Report1-1.c
+C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-1_C_code\Report1\Report1-1.c(51,8): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Report1.vcxproj -> C:\Users\Kim Jaehyeon\OneDrive - 성균관대학교\과제\5학기\알고리즘\Report1-1_C_code\x64\Debug\Report1_Ccode.exe
