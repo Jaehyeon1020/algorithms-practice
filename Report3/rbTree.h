@@ -8,16 +8,16 @@ typedef struct treeNode {
 	int color;
 } treeNode;
 
-typedef struct rbTree {
+typedef struct RbTree {
 	treeNode* root;
 	treeNode* NIL;
 
-} rbTree;
+} RbTree;
 
 treeNode* newNode(int data);
-rbTree* newRbTree();
-void leftRotation(rbTree* t, treeNode* x);
-void rightRotation(rbTree* t, treeNode* x);
-void insertionFixUp(rbTree* t, treeNode* z);
-void insertion(rbTree* t, treeNode* z);
-void inorder(rbTree* t, treeNode* n);
+RbTree* newRbTree();
+void leftRotation(RbTree* t, treeNode* x);
+void rightRotation(RbTree* t, treeNode* x);
+void insertionFixUp(RbTree* t, treeNode* z);
+void insertion(RbTree* t, treeNode* z);
+void inorder(RbTree* t, treeNode* n);

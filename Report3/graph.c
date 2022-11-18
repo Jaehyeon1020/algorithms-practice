@@ -4,27 +4,27 @@
 
 #include "graph.h"
 
-graphNode* createNode(int v) {
+graphNode* createNode(int city) {
 	graphNode * newNode = malloc(sizeof(graphNode));
-	newNode->vertex = v;
+	newNode->city = city;
 	newNode->next = NULL;
 	return newNode;
 }
 
-graph* createGraph(int verticeNum) {
-	graph* graph = malloc(sizeof(graph));
-	graph->verticeNum = verticeNum;
+Graph* createGraph(int verticeNum) {
+	Graph* Graph = malloc(sizeof(Graph));
+	Graph->verticeNum = verticeNum;
 
-	graph->adjLists = malloc(verticeNum * sizeof(graphNode));
+	Graph->adjLists = malloc(verticeNum * sizeof(graphNode));
 
 	int i;
 	for (i = 0; i < verticeNum; i++)
-		graph->adjLists[i] = NULL;
+		Graph->adjLists[i] = NULL;
 
-	return graph;
+	return Graph;
 }
 
-void addEdge(graph* graph, int source, int dest) {
+void addEdge(Graph* graph, int source, int dest) {
 	graphNode* newNode = createNode(dest);
 	newNode->next = graph->adjLists[source];
 	graph->adjLists[source] = newNode;
@@ -32,4 +32,32 @@ void addEdge(graph* graph, int source, int dest) {
 	newNode = createNode(source);
 	newNode->next = graph->adjLists[dest];
 	graph->adjLists[dest] = newNode;
+}
+
+/* source와 dest가 연결되어있는지 여부 반환 */
+int isAlreadyConnected(Graph* graph, int source, int dest) {
+	graphNode* sourceNode = graph->adjLists[source];
+	
+	while (sourceNode != NULL) {
+		if (sourceNode->city == dest) {
+			return 1;
+		}
+
+		sourceNode = sourceNode->next;
+	}
+	
+	return 0;
+}
+
+/* city와 연결된 도시가 몇 개인지 반환*/
+int getConnections(Graph* graph, int city) {
+	int connections = 0;
+	graphNode* ptrNode = graph->adjLists[city];
+
+	while (ptrNode != NULL) {
+		connections += 1;
+		ptrNode = ptrNode->next;
+	}
+
+	return connections;
 }

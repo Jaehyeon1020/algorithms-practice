@@ -1,15 +1,19 @@
 #pragma once
 
+#define CITY_NUM 26 // 26개의 도시
+
 typedef struct node {
-	int vertex;
+	char city;
 	struct node* next;
 } graphNode;
 
-typedef struct graph {
+typedef struct Graph {
 	int verticeNum;
 	struct node** adjLists;
-} graph;
+} Graph;
 
-graphNode* createNode(int v);
-graph* createGraph(int verticeNum);
-void addEdge(graph* graph, int source, int dest);
+graphNode* createNode(int city);
+Graph* createGraph(int verticeNum);
+void addEdge(Graph* graph, int source, int dest);
+int isAlreadyConnected(Graph* graph, int source, int dest);
+int getConnections(Graph* graph, int city);

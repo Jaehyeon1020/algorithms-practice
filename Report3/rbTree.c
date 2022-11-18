@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "rbTree.h"
+#include "rbtree.h"
 
 treeNode* newNode(int data) {
     treeNode* n = malloc(sizeof(treeNode));
@@ -18,8 +18,8 @@ treeNode* newNode(int data) {
     return n;
 }
 
-rbTree* newRbTree() {
-    rbTree* t = malloc(sizeof(rbTree));
+RbTree* newRbTree() {
+    RbTree* t = malloc(sizeof(RbTree));
     treeNode* nil_node = malloc(sizeof(treeNode));
 
     nil_node->parent = NULL;
@@ -33,7 +33,7 @@ rbTree* newRbTree() {
     return t;
 }
 
-void leftRotation(rbTree* t, treeNode* x) {
+void leftRotation(RbTree* t, treeNode* x) {
     treeNode* y = x->right;
     x->right = y->left;
 
@@ -53,7 +53,7 @@ void leftRotation(rbTree* t, treeNode* x) {
     x->parent = y;
 }
 
-void rightRotation(rbTree* t, treeNode* x) {
+void rightRotation(RbTree* t, treeNode* x) {
     treeNode* y = x->left;
     x->left = y->right;
 
@@ -73,7 +73,7 @@ void rightRotation(rbTree* t, treeNode* x) {
     x->parent = y;
 }
 
-void insertionFixUp(rbTree* t, treeNode* z) {
+void insertionFixUp(RbTree* t, treeNode* z) {
     while (z->parent->color == 1)
     {
         if (z->parent == z->parent->parent->left)
@@ -127,7 +127,7 @@ void insertionFixUp(rbTree* t, treeNode* z) {
     t->root->color = 0; // root to balck color
 }
 
-void insertion(rbTree* t, treeNode* z) {
+void insertion(RbTree* t, treeNode* z) {
     treeNode* y = t->NIL;
     treeNode* temp = t->root;
 
@@ -156,7 +156,7 @@ void insertion(rbTree* t, treeNode* z) {
     insertion_fixup(t, z);
 }
 
-void inorder(rbTree* t, treeNode* n) {
+void inorder(RbTree* t, treeNode* n) {
     if (n != t->NIL)
     {
         inorder(t, n->left);

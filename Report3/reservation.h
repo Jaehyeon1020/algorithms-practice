@@ -7,7 +7,8 @@ typedef struct reservation {
 	char* name;
 	char source;
 	char dest;
-	int departureTime;
+	int id;
 } Reservation;
 
+void initReservation(Reservation* reservation);
 Reservation* makeReservation(char* userInput);
