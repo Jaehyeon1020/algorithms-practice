@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stddef.h>
 #include "rbtree.h"
 
 treeNode* newNode(int data) {

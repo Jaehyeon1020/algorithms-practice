@@ -2,6 +2,7 @@
 * Functions that implement graph with adjacency list
 */
 
+#include <stddef.h>
 #include "graph.h"
 
 graphNode* createNode(int city) {
@@ -34,7 +35,7 @@ void addEdge(Graph* graph, int source, int dest) {
 	graph->adjLists[dest] = newNode;
 }
 
-/* source¿Í dest°¡ ¿¬°áµÇ¾îÀÖ´ÂÁö ¿©ºÎ ¹ÝÈ¯ */
+/* sourceï¿½ï¿½ destï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ */
 int isAlreadyConnected(Graph* graph, int source, int dest) {
 	graphNode* sourceNode = graph->adjLists[source];
 	
@@ -49,7 +50,7 @@ int isAlreadyConnected(Graph* graph, int source, int dest) {
 	return 0;
 }
 
-/* city¿Í ¿¬°áµÈ µµ½Ã°¡ ¸î °³ÀÎÁö ¹ÝÈ¯*/
+/* cityï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã°ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯*/
 int getConnections(Graph* graph, int city) {
 	int connections = 0;
 	graphNode* ptrNode = graph->adjLists[city];

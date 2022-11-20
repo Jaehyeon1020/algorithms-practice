@@ -12,3 +12,7 @@ typedef struct reservation {
 
 void initReservation(Reservation* reservation);
 Reservation* makeReservation(char* userInput);
+void registerReservation(RbTree* tree, int reservationID);
+void makeCityGraph(Graph* graph);
+char* getFlightPath(Graph* graph, int source, int dest);
+void printReservationInfo(Graph* graph, RbTree* rbTree);

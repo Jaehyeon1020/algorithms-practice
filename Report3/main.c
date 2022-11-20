@@ -1,24 +1,60 @@
 /**
 * Airline Reservation System
 * 2019314891 Kim Jaehyeon
-* 
-* 동작 흐름:
-* 1. 사용자 input 받음 (name, source, dest, time)
-* 2. 구조체로 정의된 자료형에 사용자 input 저장
-* 3. 무작위로 선정된 경로를 탐색해 여행 경로 생성
-* 4. output 출력
 */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stddef.h>
 #include <string.h>
 #include "rbtree.h"
 #include "graph.h"
 #include "reservation.h"
 
+void printFirstMenu() {
+	printf("========== Airline Reservation System ==========\n");
+	printf("1. Make new reservation\n");
+	printf("2. Check the reservations\n");
+	printf("3. Exit\n");
+}
+
+void getMenuInput(char* userInput) {
+	printf("Select : ");
+	scanf("%s", userInput);
+}
+
+void getReservationInput(char* userInput) {
+	printf("Enter your reservation information (format: name,source,destination,date) : ");
+	scanf("%s", userInput);
+}
 
 int main() {
+	Graph* cities = createGraph(CITY_NUM);
+	RbTree* reservations = newRbTree();
+	Reservation* currentReservation;
+	char* userInput;
 
+	while (1) {
+		printFirstMenu();
+		getMenuInput(userInput);
+
+		if (strcmp(userInput, "3") == 0) {
+			break;
+		}
+		else if (strcmp(userInput, "2") == 0) {
+			printReservationInfo(cities, reservations);
+		}
+		else if (strcmp(userInput, "1") == 0) {
+			getReservationInput(userInput);
+			currentReservation = makeReservation(userInput);
+			registerReservation(reservations, currentReservation->id);
+		}
+		else {
+			printf("You entered wrong input\n");
+		}
+	}
+	
+	printf("========== Exit airline reservation system ==========\n");
 
 	return 0;
 }

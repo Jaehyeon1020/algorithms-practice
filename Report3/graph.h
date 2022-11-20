@@ -1,9 +1,9 @@
 #pragma once
 
-#define CITY_NUM 26 // 26°³ÀÇ µµ½Ã
+#define CITY_NUM 26 // 26ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 typedef struct node {
-	char city;
+	int city;
 	struct node* next;
 } graphNode;
 
