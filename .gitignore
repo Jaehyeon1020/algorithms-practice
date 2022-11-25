@@ -5,3 +5,7 @@
 *.sln
 *.exe
 *.pdb
+*.sln
+*.vcxproj
+*.filters
+*.user

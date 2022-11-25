@@ -128,11 +128,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="graph.c" />
+    <ClCompile Include="linkedList.c" />
     <ClCompile Include="rbTree.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="reservation.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="linkedList.h" />
     <ClInclude Include="reservation.h" />
     <ClInclude Include="graph.h" />
     <ClInclude Include="rbtree.h" />

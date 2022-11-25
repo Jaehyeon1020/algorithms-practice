@@ -1,13 +1,5 @@
 /**
 * Functions about reservation system
-* 
-* Functions: 
-* [x] Reservation init function
-* [x] user input parsing function
-* [x] insert Reservation to red black tree
-* [] Flight path making function
-* [x] city connection making function
-* [] 
 */
 
 #include <stdio.h>
@@ -18,6 +10,7 @@
 #include "rbtree.h"
 #include "graph.h"
 #include "reservation.h"
+#include "linkedList.h"
 
 /* init Reservation */
 void initReservation(Reservation* reservation) {
@@ -40,9 +33,19 @@ Reservation* makeReservation(char* userInput) {
 	return newReservation;
 }
 
+/* get reservation that has identical reservation id ID */
+Reservation* getReservation(int id, reservationNode* reservations) {
+	return search(reservations, id);
+}
+
 /* register Reservation to red black tree by reservation ID */
 void registerReservation(RbTree* tree, int reservationID) {
 	insertion(tree, reservationID);
+}
+
+/* save Reservations to linked list*/
+void saveReservation(Reservation* reservation, reservationNode* reservations) {
+	addData(reservations, reservation);
 }
 
 /* make random connections of cities */
@@ -73,7 +76,24 @@ char* getFlightPath(Graph* graph, int source, int dest) {
 }
 
 /* print reservation informations */
-void printReservationInfo(Graph* graph, RbTree* rbTree) {
+void printReservationInfo(Graph* graph, RbTree* rbTree, reservationNode* reservations) {
+	reservationNode* currentNode = reservations->next;
+
+	printf("========================\n");
 	printf("<Your Reservations>\n");
+
+	while(reservations->next != NULL) {
+		Reservation* currentReservation = currentNode->reservation;
+
+		printf("Name: %s\n", currentReservation->name);
+		printf("Reservation ID: %d\n", currentReservation->id);
+		printf("Source: %d\n", currentReservation->source);
+		printf("Destination: %d\n", currentReservation->dest);
+		printf("---------------------\n");
+		
+		reservations = reservations->next;
+	}
+
+	printf("========================\n");
 }
 

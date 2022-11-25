@@ -10,6 +10,7 @@
 #include "rbtree.h"
 #include "graph.h"
 #include "reservation.h"
+#include "linkedList.h"
 
 void printFirstMenu() {
 	printf("========== Airline Reservation System ==========\n");
@@ -30,8 +31,10 @@ void getReservationInput(char* userInput) {
 
 int main() {
 	Graph* cities = createGraph(CITY_NUM);
-	RbTree* reservations = newRbTree();
+	RbTree* reservationTree = newRbTree();
 	Reservation* currentReservation;
+	reservationNode* head = NULL;
+
 	char* userInput;
 
 	while (1) {
@@ -42,12 +45,13 @@ int main() {
 			break;
 		}
 		else if (strcmp(userInput, "2") == 0) {
-			printReservationInfo(cities, reservations);
+			printReservationInfo(cities, reservationTree, head);
 		}
 		else if (strcmp(userInput, "1") == 0) {
 			getReservationInput(userInput);
 			currentReservation = makeReservation(userInput);
-			registerReservation(reservations, currentReservation->id);
+			registerReservation(reservationTree, currentReservation->id);
+			addData(head, currentReservation);
 		}
 		else {
 			printf("You entered wrong input\n");

@@ -35,7 +35,7 @@ void addEdge(Graph* graph, int source, int dest) {
 	graph->adjLists[dest] = newNode;
 }
 
-/* source�� dest�� ����Ǿ��ִ��� ���� ��ȯ */
+/* get if source and dest are already connected*/
 int isAlreadyConnected(Graph* graph, int source, int dest) {
 	graphNode* sourceNode = graph->adjLists[source];
 	
@@ -50,7 +50,7 @@ int isAlreadyConnected(Graph* graph, int source, int dest) {
 	return 0;
 }
 
-/* city�� ����� ���ð� �� ������ ��ȯ*/
+/* get the number of connections of all cities*/
 int getConnections(Graph* graph, int city) {
 	int connections = 0;
 	graphNode* ptrNode = graph->adjLists[city];

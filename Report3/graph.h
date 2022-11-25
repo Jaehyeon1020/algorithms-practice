@@ -1,6 +1,6 @@
 #pragma once
 
-#define CITY_NUM 26 // 26���� ����
+#define CITY_NUM 26 // 26개 도시
 
 typedef struct node {
 	int city;
